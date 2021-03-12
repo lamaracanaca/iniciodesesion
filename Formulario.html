@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de secion</title>
+    <style>
+
+        *´{
+            margin: 0;
+            padding: 0;
+            font-size: 13px;
+            font-family:sans-serif;
+        }
+        .contenedor{
+            height: 100%;
+            width: 100%;
+            background-image: linear-gradient( rgba(0, 0, 0, 0.5),  rgba(0, 0, 0, 0.5)),url(meme-trollface_00356591.jpg);
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+        }
+
+        .decaja{
+            width: 370px;
+            height: 455px;
+            position: relative;
+            margin: 6% auto;
+            background: white;
+            padding: 5px;
+            border-radius: 10px;
+            overflow: hidden;
+
+        }
+
+        .botoncaja{
+            width: 240px;
+            margin: 30px auto;
+            position: relative;
+            box-shadow:  0 0 1px 1px #1c2331;
+            border-radius: 30px;
+
+        }
+        .presionarboton{
+            padding: 10px 22px;
+            cursor: pointer;
+            background: transparent;
+            border: 0px;
+            outline: none;
+            position: relative;
+
+        }
+        #elegir{
+            top: 0;
+            left: 0;
+            position: absolute;
+            width: 120px;
+            height: 100%;
+            border-radius: 30px;
+        }
+
+        .redes{
+            margin: 30px auto;
+            text-align: center;
+        }
+        .redes img{
+            width: 30px;
+            margin: 0 12px;
+            box-shadow: rgb(0 0 1px 1px) white;
+            cursor: pointer;
+            border-radius: 5%;
+        }
+
+        .agrupamiento{
+            top: 180px;
+            position: absolute;
+            width: 280px;
+
+        }
+
+        .inputfile{
+            width: 100%;
+            padding: 10px 0;
+            margin: 5px 0;
+            border-left: 0;
+            border-top: 0;
+            border-right: 0;
+            border-bottom: 2px solid rgb(47, 145, 47);
+            outline: none;
+            background: transparent;
+
+        }
+
+        .accederboton{
+           width: 85%;
+           padding:10px 30px;
+           cursor: pointer;
+            display: block;
+            margin: auto;
+            border: 0px;
+            outline: none;
+            border-radius: 30px;
+            transition: 0.8s;
+        }
+
+        .cajacec{
+            margin: 30px 10px 20px 0;
+        }
+
+        span{
+            color: #757575;
+            font-size: 15px;
+            bottom: 64px;
+            position: absolute;
+        }
+
+        #Iniciar_Sesion{
+            left: 50px;
+
+        }
+
+        #Registrar{
+            left: 450px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <div class="decaja">
+            <div class="botoncaja">
+                <div id="elegir"></div>
+                <button type="button" class="presionarboton" onclick="Iniciar_Sesion()">Iniciar Sesion</button>
+                <button type="button" class="presionarboton" onclick="Registrar()">Registrar</button>
+
+            </div>
+            <div class="redes">
+                <img src="facebook.png" alt="facebook">
+                <img src="instagram.png" alt="instagram">
+                <img src="twitter.png" alt="twitter">
+            </div>
+            <form id="Iniciar Sesion"class="agrupamiento">
+                <input type="text" class="inputfile" placeholder="nombre de usuario" required>
+                <input type="password" class="inputfile" placeholder="contraseña" required>
+                <input type="checkbox" class="cajacec"><span>Recordar contraseña</span>
+                <button type="submit" class="accederboton">Acceder</button>
+            </form>
+            <form id="Registrar"class="agrupamiento">
+                <input type="text" class="inputfile" placeholder="nombre de usuario" required>
+                <input type="email" class="inputfile" placeholder="email" required>
+                <input type="password" class="inputfile" placeholder="contraseña" required>
+                <input type="checkbox" class="cajacec"><span>Asepto los terminos y condiciones</span>
+                <button type="submit" class="accederboton">Registrar</button>
+            </form>
+        </div>
+
+    </div>
+    <script>
+        var x = document.getElementById("Iniciar Sesion");
+        var y = document.getElementById("Registrar");
+        var z = document.getElementById("Elegir");
+
+        function Iniciar_Sesion(){
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0px";
+        }
+
+        function Registrar(){
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "120px";
+        }
+
+    </script>
+</body>
+</html>
